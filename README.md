@@ -8,7 +8,7 @@
 
 I build [Reflow](https://reflowguide.com): record a web workflow once and it becomes a step-by-step guide (a document, PDF, video and an overlay on the live page) that keeps working when the software's UI changes. It's on the [Chrome Web Store](https://chromewebstore.google.com/detail/reflow/oilikinlapenimjpkcilbjccjilnihef) and [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/reflow/akpfafggaihnclnelalfffcgaknpipgi) with six paying customers in Korea. Its first prototype took **1st place among 3,295 participants** at the OpenAI x Primer x Jocoding AI Hackathon 2026.
 
-**Now:** self-healing guides for Reflow, which replay a recorded workflow, notice when the UI has moved and prove a repair by running it again. Applied to the Meta Global AI Developer Hackathon.
+**Now:** self-healing guides for Reflow, which replay a recorded workflow, notice when the UI has moved and prove a repair by running it again. The benchmark behind the repair step is public: [selector-heal](https://github.com/Jayyo/selector-heal). Applied to the Meta Global AI Developer Hackathon.
 
 ## Reflow
 
