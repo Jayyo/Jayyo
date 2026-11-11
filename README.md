@@ -48,24 +48,25 @@ On ten public pages the snapshot came to a median of 1,413 tokens, against 13,44
 
 [Code and benchmark](https://github.com/Jayyo/agent-page-helper)
 
-## Tongue of War
+## selector-heal
 
-Summon an army by writing a Korean sentence, and an LLM opponent answers with sentences of its own. Both go through the same deterministic parser and a budget compiler, so a sentence can shape an army but never buy it extra stats.
+The repair step behind self-healing guides, measured in public. A recorded step stores a locator; after a UI change it can match nothing, several elements, or quietly the wrong one. Given the recorded element and the changed page, pick the element that does the same job now, or say it is gone. Every method is scored on what it repairs and on how often it is wrong when it answers, because a confident wrong repair is worse than asking.
 
-<a href="https://jayyo.github.io/tongue-of-war/"><img src="media/tongue-of-war.webp" alt="Tongue of War: a Korean sentence for three heavy tanks is parsed into three guards drawn as landships inside a 120-point budget, and the LLM opponent answers with a sentence of its own."></a>
+<a href="https://github.com/Jayyo/selector-heal"><img src="media/selector-heal.png" alt="Risk against coverage on 55 held-out sites: always taking the top candidate is wrong on 40% of its answers; a logistic gate and a QLoRA fine-tuned 3B model both stay near 4% wrong while answering about 55% of broken steps."></a>
 
-[Play in your browser](https://jayyo.github.io/tongue-of-war/) (against the scripted bot) · [Code](https://github.com/Jayyo/tongue-of-war) · the LLM opponent runs locally with an OpenAI, Gemini or DeepSeek key
+On 2,018 broken steps from 55 held-out sites, taking the top retrieved candidate finds the right element 89% of the time and is still wrong on 40% of its answers, since it also "repairs" controls that were deleted. A 12-feature logistic gate and a QLoRA fine-tuned Qwen2.5-3B both get that down to about 4% while answering 55%.
+
+[Code, method and full results](https://github.com/Jayyo/selector-heal)
+
+## hwpx-fill
+
+Korean public institutions still run on 한글 (HWP/HWPX) forms. hwpx-fill fills and edits them from Python on Linux without Hancom Office: it finds labels spaced out for justification (`성    명`), fills all or nothing, and moves tables and pictures from last year's submission into this year's form.
+
+<a href="https://github.com/Jayyo/hwpx-fill"><img src="media/hwpx-fill.png" alt="An equipment loan form before and after hwpx-fill: empty cells on the left, filled cells and replaced placeholders on the right."></a>
+
+[Code](https://github.com/Jayyo/hwpx-fill) · `pip install git+https://github.com/Jayyo/hwpx-fill`
 
 ## More projects
-
-**[Loop Randy](https://github.com/Jayyo/loop-randy)**: a 3D random defense game in the style of Warcraft III custom maps, built in React Three Fiber with [Jinwoo Choung](https://github.com/vpsxkqktm). Summon, merge, survive 20 waves and the bosses. [Play in your browser](https://jayyo.github.io/loop-randy/)
-
-**[Omok](https://github.com/Jayyo/gomoku)**: gomoku in plain JavaScript. The computer searches for forced wins in a Web Worker, and Renju's forbidden moves follow the RIF definitions. [Play in your browser](https://jayyo.github.io/gomoku/)
-
-<p>
-  <a href="https://jayyo.github.io/loop-randy/"><img src="media/loop-randy.png" width="49%" alt="Loop Randy at wave 9 of 20: units inside the square lane, a Striker selected, monsters running laps."></a>
-  <a href="https://jayyo.github.io/gomoku/"><img src="media/omok.png" width="49%" alt="Omok: the computer wins with a diagonal five under Renju rules."></a>
-</p>
 
 **[DART Insider](https://github.com/Jayyo/dart-insider)**: Korean executives' trades in their own company's shares, parsed from OpenDART filings, with amounts from the filed prices and a price chart per trade.
 
@@ -77,6 +78,6 @@ Summon an army by writing a Korean sentence, and an LLM opponent answers with se
 
 ---
 
-Video versions of these demos are on [jayyo.github.io](https://jayyo.github.io). I also run a 350+ member AI study community in Sejong (40+ offline sessions).
+I also run a 350+ member AI study community in Sejong (40+ offline sessions).
 
-[reflowguide.com](https://reflowguide.com) · [LinkedIn](https://www.linkedin.com/in/jaycho-reflow) · [jayyo.github.io](https://jayyo.github.io)
+[reflowguide.com](https://reflowguide.com) · [LinkedIn](https://www.linkedin.com/in/jaycho-reflow)
