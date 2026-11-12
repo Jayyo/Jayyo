@@ -76,6 +76,8 @@ Korean public institutions still run on 한글 (HWP/HWPX) forms. hwpx-fill fills
 
 **[gpt-sovits-simple](https://github.com/Jayyo/gpt-sovits-simple)**: a command line tool and Python API for GPT-SoVITS text-to-speech.
 
+**[bassless](https://github.com/Jayyo/bassless)**: practice tracks with the bass taken out, which I use while teaching myself bass. Demucs does the separation; the practice track is the original minus the bass stem, and the README has the measurements behind that choice.
+
 ---
 
 I also run a 350+ member AI study community in Sejong (40+ offline sessions).
